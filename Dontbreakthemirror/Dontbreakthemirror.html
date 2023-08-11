@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dontbreakthemirror</title>
+</head>
+<body>
+
+</body>
+<style>
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #000000;
+        overflow-x: hidden;
+    }
+    nav{
+        position: absolute;
+        width: 100%;
+        padding: 50px;
+        padding-top: 20px;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(255, 0, 0);
+    }
+    .link,ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+    }
+    .logo{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 48px;
+        padding: 20px;
+        border-radius: 14px;
+        background-color: rgba(67, 4, 4, 0.588);
+        cursor: pointer;
+    }
+    li{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 15px;
+        list-style: none;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    li:hover, .active{
+        background-color: antiquewhite;
+        color: black;
+    }
+    .container{
+        min-height: 100%;
+        max-width: 100%;
+        display: grid;
+        justify-items: center;
+    }
+    #wel{
+        position: absolute;
+        top: 550px;
+        font-family: serif;
+        font-size: 50px;
+        color: rgba(252, 6, 6, 0.71);
+    }
+    #fadeIn{
+        position: left;
+        top: 650px;
+        font-family: serif;
+        font-size: 50px;
+        color: rgba(96, 240, 1, 0.71);
+    }
+    
+    .container .item{
+        position: absolute;
+        top: 20;
+    }
+    
+    #one{
+        left: -60px;
+    }
+    #two{
+        right: -60px;
+    }
+    #three{
+        left: -400px;
+    }
+    #four{
+        right: -45600px;
+    }
+    #five{
+        top: 23px;
+    }
+    
+    .text{
+        position: absolute;
+        top: 121vh;
+        padding: 100px;
+        color: rgb(255, 255, 255);
+        background-color: #410000;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+        
+    .fade-in{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        padding-top: 20px;
+        display: flex;}
+
+    p{
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .admin{
+        position: absolute;
+        padding: 50px 0px;
+        color: rgb(86, 6, 216);
+        font-size: 35px;
+        left: 60%;
+
+    }
+    .fadeIn {
+        animation: fadeIn 2s;   
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 23;
+        }
+        to {
+            opacity: 1;
+        }
+        
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+        
+    }
+</style>
+<body>
+    <nav>
+        <div class="link"><ul>
+        </ul></div>
+    </nav>
+    <div class="container"><img src="static/backround.png" alt="">
+        <div id="one" class="item"><img src="static/tree-left.png" alt=""></div>
+        <div id="two" class="item"><img src="static/tree-right.png" alt=""></div>
+
+
+        <h1 id="wel">D̶̩̰̋͆͊̄͘̕͝o̶͙̳̬̜̺̥͑̄ ̷͔̹̌̕y̶̢̳̜͙̟̬͂̾͒̈́o̵̬̥͙͓̅̏̆ͅų̶̨̡̮̙͉̜̲̘͋̄͒̉̋̒̈́̉͘͜ ̶͍͔͚̗̫͓̣͈̓n̸̢̞̯̝̗̞̟͔̆̏e̶̗̤͖̿̑͒́̓͛e̶͍̻̩̽́̏̑͝d̵̢̧͓̻̗͓͚̺̟͉̒́͂̓ ̶̪̝̳̌̑͒̎̔͘h̴̢͙̪̰͙̦̹̖̍̇͝e̸̢̯͎̲͓̟͈̭̊ͅl̵͉̙̹̻̬̻͑͋͝p̸͎̬͖̞̜̔̉̆̐͛̅̀̏͂?̶̛͇͗̈̔ </h1>
+        <h1 id="fadeIn">Where am i?</h1>
+        <h1 id="fadeOut">Where am i?</h1>
+        
+    </div>>
+        <div class="admin"></div>
+    </div>
+
+    
+    <script>
+        let one = document.getElementById('one');
+        let two = document.getElementById('two');
+        let three = document.getElementById('three');
+        let four = document.getElementById('four');
+        let five = document.getElementById('five');
+        let wel = document.getElementById('wel');
+        let txt = document.getElementById('txt');
+
+        window.addEventListener('scroll',()=>{
+            let scroll = scrollY;
+
+            wel.style.marginTop= scroll * +.3 + 'px';
+            one.style.left= scroll * -.5 + 'px';
+            two.style.right= scroll * -.5 + 'px';
+            three.style.left= -400-scroll * -.5 + 'px';
+            four.style.right= -400-scroll * -.5 + 'px';
+            five.style.marginTop= scroll * -.3 + 'px';
+            txt.style.marginTop= scroll * -.3 + 'px';
+
+        })
+        
+    </script>
+</body>
+</html>
